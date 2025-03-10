@@ -1,0 +1,7 @@
+output/
+pic/
+video/
+test/
+.credentials/
+myenv/
+*.pt
