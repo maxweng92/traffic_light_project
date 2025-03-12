@@ -143,21 +143,28 @@ cap = cv2.VideoCapture(video_path)
 frame_count = 0  # 計數器
 paused = False  # 設定一個變數來追蹤是否暫停
 while cap.isOpened():
-    success, frame = cap.read()
-    if not success:
-        break
-    
     if not paused:
+        success, frame = cap.read()
+        if not success:
+            break
+
         frame_count += 1
         if frame_count % 3 == 0:  # 每 3 幀才進行 YOLO 偵測
             video(frame)
 
     key = cv2.waitKey(30) & 0xFF  # 只執行一次
-    
+
     if key == 27:  # 按 'ESC' 退出
         break
     elif key == 32:  # 按 '空白鍵' 暫停/繼續
         paused = not paused
+        while paused:  # 停留在這裡，直到使用者按下空白鍵繼續
+            key = cv2.waitKey(30) & 0xFF
+            if key == 32:
+                paused = False
+            elif key == 27:
+                paused = False
+                break
 
 cap.release()
 cv2.destroyAllWindows()
