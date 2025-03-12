@@ -33,34 +33,18 @@ def split_box(image,c,conf):
     # 轉換為 HSV 色彩空間
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    # 紅燈範圍（包含兩個範圍）
-    lower_red1 = np.array([0, 100, 100])
-    upper_red1 = np.array([10, 255, 255])
-    lower_red2 = np.array([160, 100, 100])
-    upper_red2 = np.array([180, 255, 255])
-
-    # 黃燈範圍
-    lower_yellow = np.array([12, 100, 20])
-    upper_yellow = np.array([35, 255, 255])
-
-    # 綠燈範圍
+    # 定義紅、黃、綠燈的 HSV 範圍
+    lower_red1, upper_red1 = np.array([0, 100, 100]), np.array([10, 255, 255])
+    lower_red2, upper_red2 = np.array([160, 100, 100]), np.array([180, 255, 255])
+    lower_yellow, upper_yellow = np.array([12, 100, 20]), np.array([35, 255, 255])
+    lower_green, upper_green = np.array([50, 140, 90]), np.array([90, 255, 255])
     # lower_green = np.array([40, 100, 100])
     # upper_green = np.array([90, 255, 255])
-    lower_green = np.array([50, 140, 90])
-    upper_green = np.array([90, 255, 255])
 
-    # 建立紅色遮罩（兩個範圍）
-    mask_red1 = cv2.inRange(hsv, lower_red1, upper_red1)
-    mask_red2 = cv2.inRange(hsv, lower_red2, upper_red2)
-    mask_red = mask_red1 + mask_red2
-
-    # 建立黃色遮罩
+    # 建立遮罩（包含兩個範圍）
+    mask_red = cv2.inRange(hsv, lower_red1, upper_red1) + cv2.inRange(hsv, lower_red2, upper_red2)
     mask_yellow = cv2.inRange(hsv, lower_yellow, upper_yellow)
-
-    # 建立綠色遮罩
     mask_green = cv2.inRange(hsv, lower_green, upper_green)
-
-
 
     # 判斷目前燈號
     light_color = "---"
