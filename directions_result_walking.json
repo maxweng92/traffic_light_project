@@ -1,0 +1,549 @@
+[
+    {
+        "bounds": {
+            "northeast": {
+                "lat": 25.0463345,
+                "lng": 121.5447845
+            },
+            "southwest": {
+                "lat": 25.0246906,
+                "lng": 121.5174108
+            }
+        },
+        "copyrights": "Map data ©2024 Google",
+        "legs": [
+            {
+                "distance": {
+                    "text": "4.6 km",
+                    "value": 4558
+                },
+                "duration": {
+                    "text": "1 hour 7 mins",
+                    "value": 4018
+                },
+                "end_address": "Taipei Main Station, No. 49號忠孝西路1段 Zhongzheng District, Taipei City, Taiwan 10041",
+                "end_location": {
+                    "lat": 25.0463345,
+                    "lng": 121.5174108
+                },
+                "start_address": "No. 134號, Section 2, Heping E Rd, Da’an District, Taipei City, Taiwan 106",
+                "start_location": {
+                    "lat": 25.0246906,
+                    "lng": 121.5447845
+                },
+                "steps": [
+                    {
+                        "distance": {
+                            "text": "0.6 km",
+                            "value": 608
+                        },
+                        "duration": {
+                            "text": "9 mins",
+                            "value": 515
+                        },
+                        "end_location": {
+                            "lat": 25.0254335,
+                            "lng": 121.5387764
+                        },
+                        "html_instructions": "Head <b>west</b> on <b>和平東路二段</b> toward <b>復興南路二段337巷6弄</b>",
+                        "polyline": {
+                            "points": "isvwC{ezdV?NA^Ax@A^?LANArAARATGjAANIx@O~AK~@KdAANKnAQjCIrAANIjAAJAN?DIj@CRAN"
+                        },
+                        "start_location": {
+                            "lat": 25.0246906,
+                            "lng": 121.5447845
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "12 m",
+                            "value": 12
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 22
+                        },
+                        "end_location": {
+                            "lat": 25.0256347,
+                            "lng": 121.538802
+                        },
+                        "html_instructions": "Turn <b>right</b> onto <b>瑞安街</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "}wvwCk`ydVQ?E?OC"
+                        },
+                        "start_location": {
+                            "lat": 25.0254335,
+                            "lng": 121.5387764
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.2 km",
+                            "value": 152
+                        },
+                        "duration": {
+                            "text": "3 mins",
+                            "value": 162
+                        },
+                        "end_location": {
+                            "lat": 25.0257847,
+                            "lng": 121.5373287
+                        },
+                        "html_instructions": "Turn <b>left</b> onto <b>和平東路二段</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "eyvwCo`ydVGhAANElAARIbA?HAR?F"
+                        },
+                        "start_location": {
+                            "lat": 25.0256347,
+                            "lng": 121.538802
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.1 km",
+                            "value": 139
+                        },
+                        "duration": {
+                            "text": "2 mins",
+                            "value": 114
+                        },
+                        "end_location": {
+                            "lat": 25.0264089,
+                            "lng": 121.5363395
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "czvwCiwxdVW?I??DAFCFA@GFGF]^M^EPENCPALEZ"
+                        },
+                        "start_location": {
+                            "lat": 25.0257847,
+                            "lng": 121.5373287
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.1 km",
+                            "value": 114
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 89
+                        },
+                        "end_location": {
+                            "lat": 25.0274269,
+                            "lng": 121.536242
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "a~vwCcqxdVS?w@BiAFc@DQ@"
+                        },
+                        "start_location": {
+                            "lat": 25.0264089,
+                            "lng": 121.5363395
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.2 km",
+                            "value": 221
+                        },
+                        "duration": {
+                            "text": "3 mins",
+                            "value": 177
+                        },
+                        "end_location": {
+                            "lat": 25.0289295,
+                            "lng": 121.5352079
+                        },
+                        "html_instructions": "Turn <b>left</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "mdwwCopxdVEd@CPAD?D?DAHADADGJGFGDGBC@EBI@Q@q@@UDC?K@OBUDKBEBg@Z[L"
+                        },
+                        "start_location": {
+                            "lat": 25.0274269,
+                            "lng": 121.536242
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "15 m",
+                            "value": 15
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 12
+                        },
+                        "end_location": {
+                            "lat": 25.0289845,
+                            "lng": 121.5350805
+                        },
+                        "html_instructions": "Turn <b>left</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "ymwwCajxdV?LABABA@C@"
+                        },
+                        "start_location": {
+                            "lat": 25.0289295,
+                            "lng": 121.5352079
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "15 m",
+                            "value": 15
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 12
+                        },
+                        "end_location": {
+                            "lat": 25.0291059,
+                            "lng": 121.5351115
+                        },
+                        "html_instructions": "Turn <b>right</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "cnwwCgixdVIBGCGE"
+                        },
+                        "start_location": {
+                            "lat": 25.0289845,
+                            "lng": 121.5350805
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.5 km",
+                            "value": 497
+                        },
+                        "duration": {
+                            "text": "7 mins",
+                            "value": 394
+                        },
+                        "end_location": {
+                            "lat": 25.0332018,
+                            "lng": 121.5334087
+                        },
+                        "html_instructions": "Turn <b>left</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "}nwwCmixdVUJIDKDIFGDGFIJCFA@EFEDEFEDEBGDEBEBOFGDE@G@IBE?I@K?QBC?E@K@KBC@KBWHq@Pa@Ju@Vm@R_@Jc@Lm@Le@FYBM@GDKDEBG@IBG@EBC@GBEDC@E@C@C?C?G?KAC@I@EA"
+                        },
+                        "start_location": {
+                            "lat": 25.0291059,
+                            "lng": 121.5351115
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "41 m",
+                            "value": 41
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 33
+                        },
+                        "end_location": {
+                            "lat": 25.0333387,
+                            "lng": 121.5330646
+                        },
+                        "html_instructions": "Turn <b>left</b> toward <b>新生南路二段</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "ohxwCy~wdVCR?D@B?B?@A??@A?A@A?A??@A@A@KV"
+                        },
+                        "start_location": {
+                            "lat": 25.0332018,
+                            "lng": 121.5334087
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "15 m",
+                            "value": 15
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 12
+                        },
+                        "end_location": {
+                            "lat": 25.0333084,
+                            "lng": 121.532975
+                        },
+                        "html_instructions": "Turn <b>left</b> toward <b>新生南路二段</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "kixwCs|wdVDN"
+                        },
+                        "start_location": {
+                            "lat": 25.0333387,
+                            "lng": 121.5330646
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "44 m",
+                            "value": 44
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 57
+                        },
+                        "end_location": {
+                            "lat": 25.0336356,
+                            "lng": 121.5328974
+                        },
+                        "html_instructions": "Turn <b>right</b> onto <b>新生南路二段</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "eixwCc|wdV[HQDS?"
+                        },
+                        "start_location": {
+                            "lat": 25.0333084,
+                            "lng": 121.532975
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.5 km",
+                            "value": 517
+                        },
+                        "duration": {
+                            "text": "8 mins",
+                            "value": 469
+                        },
+                        "end_location": {
+                            "lat": 25.0383779,
+                            "lng": 121.5329921
+                        },
+                        "html_instructions": "Continue onto <b>新生南路一段</b>",
+                        "polyline": {
+                            "points": "gkxwCs{wdVQ?}AAM?cAAM?}@?M?q@AO?_AAM?cAAM?oA?O?_AAMA{@AM?cB?QAE?S?Q?IAQ@"
+                        },
+                        "start_location": {
+                            "lat": 25.0336356,
+                            "lng": 121.5328974
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "10 m",
+                            "value": 10
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 18
+                        },
+                        "end_location": {
+                            "lat": 25.038365,
+                            "lng": 121.5329008
+                        },
+                        "html_instructions": "Turn <b>left</b> onto <b>仁愛路二段</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "{hywCe|wdV@H@F"
+                        },
+                        "start_location": {
+                            "lat": 25.0383779,
+                            "lng": 121.5329921
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.4 km",
+                            "value": 442
+                        },
+                        "duration": {
+                            "text": "6 mins",
+                            "value": 371
+                        },
+                        "end_location": {
+                            "lat": 25.0422233,
+                            "lng": 121.5330124
+                        },
+                        "html_instructions": "Turn <b>right</b> onto <b>新生南路一段</b><div style=\"font-size:0.9em\">Pass by the church (on the right in 170m)</div>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "whywCs{wdVa@?a@AyA?C?C?MAe@?kCEM?kA?M?O?cA@M?iAGm@Ao@?k@C"
+                        },
+                        "start_location": {
+                            "lat": 25.038365,
+                            "lng": 121.5329008
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "1.4 km",
+                            "value": 1412
+                        },
+                        "duration": {
+                            "text": "21 mins",
+                            "value": 1261
+                        },
+                        "end_location": {
+                            "lat": 25.0455612,
+                            "lng": 121.5194772
+                        },
+                        "html_instructions": "Turn <b>left</b> onto <b>忠孝東路</b>/<wbr/><b>忠孝東路二段</b>/<wbr/><b>台5線</b><div style=\"font-size:0.9em\">Continue to follow 忠孝東路/<wbr/>台5線</div><div style=\"font-size:0.9em\">Pass by 飛鼠文化工作室 (on the left in 850m)</div>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "{`zwCi|wdVCRADCTSnACNG^CNI`@CXQjAWzAIZADCNOx@UjAERETCPc@dCQ`ACLQfAu@|DCLKn@GVCNe@vCSvAU`BCLCNCNIh@SnACLObACNCJQnACLCRW`BQjACNIj@CLKt@CN?DCLCRId@u@pFAPC^ARCTAB"
+                        },
+                        "start_location": {
+                            "lat": 25.0422233,
+                            "lng": 121.5330124
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "33 m",
+                            "value": 33
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 45
+                        },
+                        "end_location": {
+                            "lat": 25.045635,
+                            "lng": 121.5191208
+                        },
+                        "html_instructions": "Continue onto <b>忠孝西路一段</b>/<wbr/><b>縱貫公路</b>/<wbr/><b>台1線</b>/<wbr/><b>台3線</b><div style=\"font-size:0.9em\">Toll road</div>",
+                        "polyline": {
+                            "points": "wuzwCwgudVCRETCV?D"
+                        },
+                        "start_location": {
+                            "lat": 25.0455612,
+                            "lng": 121.5194772
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "6 m",
+                            "value": 6
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 11
+                        },
+                        "end_location": {
+                            "lat": 25.045635,
+                            "lng": 121.5191208
+                        },
+                        "html_instructions": "Turn <b>left</b> toward <b>忠孝西路一段</b>/<wbr/><b>縱貫公路</b>/<wbr/><b>台1線</b>/<wbr/><b>台3線</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "evzwCoeudV"
+                        },
+                        "start_location": {
+                            "lat": 25.045635,
+                            "lng": 121.5191208
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "65 m",
+                            "value": 65
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 78
+                        },
+                        "end_location": {
+                            "lat": 25.0459429,
+                            "lng": 121.5191865
+                        },
+                        "html_instructions": "Take the pedestrian overpass stairs<div style=\"font-size:0.9em\">Take the stairs</div>",
+                        "polyline": {
+                            "points": "evzwCoeudV@B?@?@ETA?]KA?UEGCDU"
+                        },
+                        "start_location": {
+                            "lat": 25.045635,
+                            "lng": 121.5191208
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "10 m",
+                            "value": 10
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 10
+                        },
+                        "end_location": {
+                            "lat": 25.0458942,
+                            "lng": 121.5192144
+                        },
+                        "html_instructions": "Turn <b>right</b> toward <b>忠孝西路一段</b>/<wbr/><b>縱貫公路</b>/<wbr/><b>台1線</b>/<wbr/><b>台3線</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "cxzwC}eudV@CB?B?"
+                        },
+                        "start_location": {
+                            "lat": 25.0459429,
+                            "lng": 121.5191865
+                        },
+                        "travel_mode": "WALKING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.2 km",
+                            "value": 190
+                        },
+                        "duration": {
+                            "text": "3 mins",
+                            "value": 156
+                        },
+                        "end_location": {
+                            "lat": 25.0463345,
+                            "lng": 121.5174108
+                        },
+                        "html_instructions": "Turn <b>right</b> onto <b>忠孝西路一段</b>/<wbr/><b>縱貫公路</b>/<wbr/><b>台1線</b>/<wbr/><b>台3線</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "ywzwCafudVQjACLe@pC?LCLAJAHADENCLAFCNAL"
+                        },
+                        "start_location": {
+                            "lat": 25.0458942,
+                            "lng": 121.5192144
+                        },
+                        "travel_mode": "WALKING"
+                    }
+                ],
+                "traffic_speed_entry": [],
+                "via_waypoint": []
+            }
+        ],
+        "overview_polyline": {
+            "points": "isvwC{ezdVKnGI`BKhAi@tFi@~HMlBM~@ANQ?UCIxAG`BIlAAZa@?ALEHON]^M^K`@E^EZS?aCJu@FIv@CZS^YNcBJu@JQFcAh@APCDMDOIk@VQLQRQVYVc@T]Fk@D]FyA`@eDbAqAZ_AJUFQH_@JULQBSAMBEACR@HADEBEDKVDNm@NqCA}CAaIEgHG[AQ@@H@Fa@?{BA{@AsFEsA@wAG}AAk@CCREZW~AYjBu@hEo@hDoCpO}@nFq@vEoAfIoAnIKv@_AvGEp@K`AIl@@H?BETw@QGCDUDCMjAi@~CGp@ShA"
+        },
+        "summary": "忠孝東路/台5線",
+        "warnings": [
+            "Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
+        ],
+        "waypoint_order": []
+    }
+]

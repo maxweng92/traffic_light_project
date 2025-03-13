@@ -1,0 +1,290 @@
+[
+    {
+        "bounds": {
+            "northeast": {
+                "lat": 25.0462912,
+                "lng": 121.5447903
+            },
+            "southwest": {
+                "lat": 25.0246516,
+                "lng": 121.5173977
+            }
+        },
+        "copyrights": "Map data ©2024 Google",
+        "legs": [
+            {
+                "distance": {
+                    "text": "4.6 km",
+                    "value": 4587
+                },
+                "duration": {
+                    "text": "15 mins",
+                    "value": 887
+                },
+                "duration_in_traffic": {
+                    "text": "15 mins",
+                    "value": 878
+                },
+                "end_address": "Taipei Main Station, No. 49號忠孝西路1段 Zhongzheng District, Taipei City, Taiwan 10041",
+                "end_location": {
+                    "lat": 25.0462912,
+                    "lng": 121.5173977
+                },
+                "start_address": "No. 134號, Section 2, Heping E Rd, Da’an District, Taipei City, Taiwan 106",
+                "start_location": {
+                    "lat": 25.0246516,
+                    "lng": 121.5447769
+                },
+                "steps": [
+                    {
+                        "distance": {
+                            "text": "9 m",
+                            "value": 9
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 2
+                        },
+                        "end_location": {
+                            "lat": 25.0247356,
+                            "lng": 121.5447843
+                        },
+                        "html_instructions": "Head <b>north</b> toward <b>和平東路二段</b>",
+                        "polyline": {
+                            "points": "asvwC{ezdVQ?"
+                        },
+                        "start_location": {
+                            "lat": 25.0246516,
+                            "lng": 121.5447769
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "1.0 km",
+                            "value": 1017
+                        },
+                        "duration": {
+                            "text": "5 mins",
+                            "value": 300
+                        },
+                        "end_location": {
+                            "lat": 25.0260704,
+                            "lng": 121.5349355
+                        },
+                        "html_instructions": "Turn <b>left</b> at the 1st cross street onto <b>和平東路二段</b>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "ssvwC{ezdVWAAbAAb@A^ARCdB?XQnCCHCTGh@E`@K~@CZGx@E^Ch@El@Gr@Gn@GjAMjBOfBGtAG~AKnA?D?JAPCLM~AEf@E|@I`ACZO|BALCZ?B"
+                        },
+                        "start_location": {
+                            "lat": 25.0247356,
+                            "lng": 121.5447843
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.5 km",
+                            "value": 527
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 69
+                        },
+                        "end_location": {
+                            "lat": 25.0306363,
+                            "lng": 121.53374
+                        },
+                        "html_instructions": "Turn <b>right</b> onto <b>新生南路二段</b>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "}{vwCkhxdVc@EE?a@A_@CQ?K?O@U@I@YBM@UDMBcEbAa@JcCj@C@IBy@RoBh@wA\\QF"
+                        },
+                        "start_location": {
+                            "lat": 25.0260704,
+                            "lng": 121.5349355
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.3 km",
+                            "value": 333
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 53
+                        },
+                        "end_location": {
+                            "lat": 25.0334993,
+                            "lng": 121.5327619
+                        },
+                        "html_instructions": "Keep <b>left</b> to stay on <b>新生南路二段</b>",
+                        "maneuver": "keep-left",
+                        "polyline": {
+                            "points": "oxwwC{`xdVKBy@TkAXoBf@m@NmD|@YFk@LC?SB"
+                        },
+                        "start_location": {
+                            "lat": 25.0306363,
+                            "lng": 121.53374
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.4 km",
+                            "value": 353
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 49
+                        },
+                        "end_location": {
+                            "lat": 25.0366729,
+                            "lng": 121.5328061
+                        },
+                        "html_instructions": "Continue straight onto <b>新生南路一段</b>",
+                        "maneuver": "straight",
+                        "polyline": {
+                            "points": "kjxwCwzwdVS@OAU@U?uIGgDAk@A"
+                        },
+                        "start_location": {
+                            "lat": 25.0334993,
+                            "lng": 121.5327619
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.4 km",
+                            "value": 391
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 56
+                        },
+                        "end_location": {
+                            "lat": 25.0401825,
+                            "lng": 121.5328981
+                        },
+                        "html_instructions": "Keep <b>left</b> to stay on <b>新生南路一段</b>",
+                        "maneuver": "keep-left",
+                        "polyline": {
+                            "points": "e~xwCa{wdVa@@yA?oCCQAO?YCm@?_@AyA?C?KAm@?oCE"
+                        },
+                        "start_location": {
+                            "lat": 25.0366729,
+                            "lng": 121.5328061
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.3 km",
+                            "value": 288
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 84
+                        },
+                        "end_location": {
+                            "lat": 25.0406295,
+                            "lng": 121.5300998
+                        },
+                        "html_instructions": "Turn <b>left</b> after the church (on the right)",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "ctywCs{wdV?Z?NApAIfBC^SjACPq@jE"
+                        },
+                        "start_location": {
+                            "lat": 25.0401825,
+                            "lng": 121.5328981
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.3 km",
+                            "value": 254
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 61
+                        },
+                        "end_location": {
+                            "lat": 25.0428412,
+                            "lng": 121.5307137
+                        },
+                        "html_instructions": "Turn <b>right</b> after the pharmacy (on the right)<div style=\"font-size:0.9em\">Pass by 黑白切 (on the left)</div>",
+                        "maneuver": "turn-right",
+                        "polyline": {
+                            "points": "}vywCcjwdVgB]{AUmAWoAUq@Me@I"
+                        },
+                        "start_location": {
+                            "lat": 25.0406295,
+                            "lng": 121.5300998
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "1.0 km",
+                            "value": 980
+                        },
+                        "duration": {
+                            "text": "3 mins",
+                            "value": 166
+                        },
+                        "end_location": {
+                            "lat": 25.0453274,
+                            "lng": 121.5215457
+                        },
+                        "html_instructions": "Turn <b>left</b> onto <b>忠孝東路</b>/<wbr/><b>忠孝東路二段</b>/<wbr/><b>台5線</b><div style=\"font-size:0.9em\">Continue to follow 忠孝東路/<wbr/>台5線</div><div style=\"font-size:0.9em\">Pass by 長頸鹿文化事業股份有限公司 (on the right in 800m)</div>",
+                        "maneuver": "turn-left",
+                        "polyline": {
+                            "points": "wdzwC}mwdVWKSbAWvAKf@e@hCI`@Mz@_@pBg@zCKj@Ib@i@fDStACNSpAIf@c@vCId@[xBKd@w@hFQdAER"
+                        },
+                        "start_location": {
+                            "lat": 25.0428412,
+                            "lng": 121.5307137
+                        },
+                        "travel_mode": "DRIVING"
+                    },
+                    {
+                        "distance": {
+                            "text": "0.4 km",
+                            "value": 435
+                        },
+                        "duration": {
+                            "text": "1 min",
+                            "value": 47
+                        },
+                        "end_location": {
+                            "lat": 25.0462912,
+                            "lng": 121.5173977
+                        },
+                        "html_instructions": "Slight <b>left</b> onto <b>忠孝西路一段</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                        "maneuver": "turn-slight-left",
+                        "polyline": {
+                            "points": "itzwCutudVBD@@@B?@?BA@?BAFAD?BKn@ABIp@AFG\\CPId@In@CJE\\E^CNMnAW~AADId@CTCNId@ADADCFCDEFALALCJAHADGXETCR"
+                        },
+                        "start_location": {
+                            "lat": 25.0453274,
+                            "lng": 121.5215457
+                        },
+                        "travel_mode": "DRIVING"
+                    }
+                ],
+                "traffic_speed_entry": [],
+                "via_waypoint": []
+            }
+        ],
+        "overview_polyline": {
+            "points": "asvwC{ezdVi@ACfBGrDUxCK~@]vDu@rKW|DG~AKnA?PE^c@fGYbE?Bc@Eg@Aq@C[@gAHc@HeFnAkEdAeFrAcHfBgEdAo@Lg@De@?_QK{B@aDEi@CmAAwCAoCE?ZA`BMfCW|Aq@jEgB]iDm@aCc@}@U}AlI_BjJsAlIoDpUWxADF?J]bC_@dCSxAe@nDKj@QjAKXGTEXQ~@CR"
+        },
+        "summary": "和平東路二段",
+        "warnings": [],
+        "waypoint_order": []
+    }
+]
