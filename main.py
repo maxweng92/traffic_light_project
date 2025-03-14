@@ -26,8 +26,8 @@ def identify_colors(mask, color_name):
             return color_name, largest_area
     return None, 0
 
-# split_trafficLight
-def split_trafficLight(image,c,conf):
+# find_traffic_light
+def find_traffic_light(image,c,conf):
     windownumber=f"traffic_light_{c+1}"
 
     # 轉換為 HSV 色彩空間
@@ -112,7 +112,7 @@ def video(image):
         if(conf!=-1):
             box=boxlist[c]
             x1, y1, x2, y2 = map(int, box.xyxy[0])  # 取得邊界框座標
-            split_trafficLight(image[y1:y2, x1:x2],c,round(conflist[c],2))  # 截圖紅綠燈
+            find_traffic_light(image[y1:y2, x1:x2],c,round(conflist[c],2))  # 截圖紅綠燈
             traffic_light_count += 1
 
             # 儲存圖片
