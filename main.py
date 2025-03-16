@@ -5,8 +5,6 @@ import numpy as np
 window_width = 1280
 window_height = 720
 
-blank_image = np.zeros((100, 200, 3), dtype="uint8")
-
 
 
 # 設定視窗名稱和可調整大小的屬性
