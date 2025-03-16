@@ -5,15 +5,11 @@ import numpy as np
 window_width = 1280
 window_height = 720
 
-
-
 # 設定視窗名稱和可調整大小的屬性
 #cv2.namedWindow("YOLO Detection", cv2.WINDOW_NORMAL)
 #cv2.resizeWindow("YOLO Detection", target_width, target_height)
 cv2.namedWindow("Original Video", cv2.WINDOW_NORMAL)
 cv2.resizeWindow("Original Video", window_width, window_height)
-
-
 
 # identify_colors
 def identify_colors(mask, color_name):
@@ -120,14 +116,6 @@ def video(image):
             x1, y1, x2, y2 = map(int, box.xyxy[0])  # 取得邊界框座標
             find_traffic_light(image[y1:y2, x1:x2],c,round(conflist[c],2))  # 截圖紅綠燈
             traffic_light_count += 1
-
-            # 儲存圖片
-            #save_path = f"output/traffic_light_{traffic_light_count}.jpg"
-            #cv2.imwrite(save_path, cropped_img)
-            #print((cropped_img))
-            # 測試視窗
-            # cv2.imshow(f"test{c}", image[y1:y2, x1:x2]) 
-            # cv2.moveWindow(f"test{c}",c*300+100,600)
         else:
             if cv2.getWindowProperty(f"traffic_light_{c+1}",cv2.WND_PROP_VISIBLE)==1:
                 cv2.destroyWindow(f"traffic_light_{c+1}")
