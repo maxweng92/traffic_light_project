@@ -4,11 +4,6 @@ import numpy as np
 
 window_width = 1280
 window_height = 720
-
-
-# 設定視窗名稱和可調整大小的屬性
-#cv2.namedWindow("YOLO Detection", cv2.WINDOW_NORMAL)
-#cv2.resizeWindow("YOLO Detection", target_width, target_height)
 cv2.namedWindow("Original Video", cv2.WINDOW_NORMAL)
 cv2.resizeWindow("Original Video", window_width, window_height)
 
@@ -21,10 +16,29 @@ def identify_colors(mask, color_name):
 
         largest_contour = max(contours, key=cv2.contourArea)  # 找最大輪廓
         largest_area = cv2.contourArea(largest_contour)  # 計算最大輪廓的面積
-        if largest_area > 500:  # 過濾雜訊
-            # print(f"{color_name} largest_area", largest_area)
-            return color_name, largest_area
+        x, y, w, h = cv2.boundingRect(largest_contour)  # 獲取邊界框
+        aspect_ratio = w / float(h)  # 計算長寬比
+        print("Aspect_ratio:", aspect_ratio)
+        if 0.8 <= aspect_ratio <= 1.3:  # 接近正方形
+            if largest_area > 500:  # 過濾雜訊
+                return color_name, largest_area
+            # return color_name, largest_area
+            elif color_name == "Green":
+                if largest_area > 50:  # 過濾雜訊
+                    return ">", largest_area
     return None, 0
+
+# split_box
+def split_traffic_light(image, mask):
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    split_traffic_light_frames=[]
+    for contour in contours:
+        area = cv2.contourArea(contour)
+        if area > 50:  # 過濾掉小雜訊
+            x, y, w, h = cv2.boundingRect(contour)  # 計算外接矩形
+            cropped_img = image[y:y+h, x:x+w]  # 裁剪出物件
+            split_traffic_light_frames.append(cropped_img)   
+    return split_traffic_light_frames
 
 # find_traffic_light
 def find_traffic_light(image,c,conf):
@@ -32,49 +46,71 @@ def find_traffic_light(image,c,conf):
 
     # 轉換為 HSV 色彩空間
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-
-    # 定義紅、黃、綠燈的 HSV 範圍
-    lower_red1, upper_red1 = np.array([0, 100, 100]), np.array([10, 255, 255])
-    lower_red2, upper_red2 = np.array([160, 100, 100]), np.array([180, 255, 255])
-    lower_yellow, upper_yellow = np.array([12, 100, 20]), np.array([35, 255, 255])
-    lower_green, upper_green = np.array([50, 140, 90]), np.array([90, 255, 255])
-    # lower_green = np.array([40, 100, 100])
-    # upper_green = np.array([90, 255, 255])
-
     # 建立遮罩（包含兩個範圍）
     mask_red = cv2.inRange(hsv, lower_red1, upper_red1) + cv2.inRange(hsv, lower_red2, upper_red2)
     mask_yellow = cv2.inRange(hsv, lower_yellow, upper_yellow)
     mask_green = cv2.inRange(hsv, lower_green, upper_green)
 
-    # 判斷目前燈號
-    light_color = "---"
-    light_BGR = (255, 255, 255)
-    largest_area = 0
-    # 先嘗試識別不同燈號
-    red_result = identify_colors(mask_red, "Red")
-    yellow_result = identify_colors(mask_yellow, "Yellow")
-    green_result = identify_colors(mask_green, "Green")
+    split_traffic_light_frames = []
+    split_traffic_light_frames+=(split_traffic_light(image, mask_red))
+    split_traffic_light_frames+=(split_traffic_light(image, mask_green))
+    split_traffic_light_frames+=(split_traffic_light(image, mask_yellow))
 
-    if red_result[0]:  # 檢查是否識別到紅燈
-        light_color = red_result[0]
-        light_BGR = (0, 0, 255)
-        largest_area = red_result[1]
-    elif yellow_result[0]:  # 檢查是否識別到黃燈
-        light_color = yellow_result[0]
-        light_BGR = (0, 255, 255)
-        largest_area = yellow_result[1]
-    elif green_result[0]:  # 檢查是否識別到綠燈
-        light_color = green_result[0]
-        light_BGR = (0, 255, 0)
-        largest_area = green_result[1]
+    light_colors = []
 
-    # 在上方添加黑色區域
-    border_top = 40
-    image = cv2.copyMakeBorder(image, border_top, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
+    # 轉換為 HSV 色彩空間
+    for i, frame in enumerate(split_traffic_light_frames):
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # 顯示結果
-    cv2.putText(image, f"{light_color}", (0, 15), cv2.FONT_HERSHEY_SIMPLEX, 0.6, light_BGR, 2)
-    cv2.putText(image, f"{conf}, {largest_area}", (0, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, light_BGR, 2)
+        # 建立遮罩（包含兩個範圍）
+        mask_red = cv2.inRange(hsv, lower_red1, upper_red1) + cv2.inRange(hsv, lower_red2, upper_red2)
+        mask_yellow = cv2.inRange(hsv, lower_yellow, upper_yellow)
+        mask_green = cv2.inRange(hsv, lower_green, upper_green)
+
+        # 先嘗試識別不同燈號
+        red_result = identify_colors(mask_red, "Red")
+        yellow_result = identify_colors(mask_yellow, "Yellow")
+        green_result = identify_colors(mask_green, "Green")
+
+        # 判斷目前燈號
+        light_BGR = (255, 255, 255)
+        largest_area = 0
+
+        if red_result[0]:  # 檢查是否識別到紅燈
+            light_colors.append(red_result[0])
+            light_BGR = (0, 0, 255)
+            largest_area = red_result[1]
+        elif yellow_result[0]:  # 檢查是否識別到黃燈
+            light_colors.append(yellow_result[0])
+            light_BGR = (0, 255, 255)
+            largest_area = yellow_result[1]
+        elif green_result[0]:  # 檢查是否識別到綠燈
+            light_colors.append(green_result[0])
+            light_BGR = (0, 255, 0)
+            largest_area = green_result[1]
+            cv2.putText(mask_green, f"{c}", (0, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, light_BGR, 2)
+            cv2.imshow("Green Mask", mask_green)
+            cv2.waitKey(0)
+
+        print(f"目前的紅綠燈狀態：{light_colors}")
+
+        image = cv2.copyMakeBorder(image, 30, 0, 0, 0, cv2.BORDER_CONSTANT, value=(0, 0, 0))
+        cv2.putText(image, f"{conf}, {largest_area}", (0, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.5, light_BGR, 2)
+        # last frame
+        if i==len(split_traffic_light_frames)-1:
+            for x, light_color in enumerate(light_colors,0):
+                # 根據 light_colors 設定文字顏色
+                if light_color == "Red":
+                    light_BGR = (0, 0, 255)  # 紅色
+                elif light_color == "Yellow":
+                    light_BGR = (0, 255, 255)  # 黃色
+                elif light_color == "Green" or light_color == ">":
+                    light_BGR = (0, 255, 0)  # 綠色
+                else:
+                    light_BGR = (255, 255, 255)  # 綠色
+                cv2.putText(image, f"{light_color}", (15*x, 15),
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, light_BGR, 2)
+
     cv2.imshow(f"{windownumber}", image)
     
 # yoloVideo
@@ -127,6 +163,14 @@ def video(image):
 model = YOLO("YOLOv8l.pt")
 target_classes = [0, 1, 2, 3, 5, 7, 9]  
 # print(model.names)
+
+# 定義紅、黃、綠燈的 HSV 範圍
+lower_red1, upper_red1 = np.array([0, 100, 100]), np.array([10, 255, 255])
+lower_red2, upper_red2 = np.array([160, 100, 100]), np.array([180, 255, 255])
+lower_yellow, upper_yellow = np.array([12, 100, 20]), np.array([35, 255, 255])
+lower_green, upper_green = np.array([50, 140, 90]), np.array([90, 255, 255])
+# lower_green = np.array([40, 100, 100])
+# upper_green = np.array([90, 255, 255])
 
 # 開啟影片
 video_path = "video/2025-01-19_11-47-10-front - Trim.mp4"
